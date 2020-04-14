@@ -1,3 +1,5 @@
+<%@page import="JavaPackage.EmpleadoVO"%>
+<%@page import="JavaPackage.EmpleadoDAO"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Crear cuenta</title>
+  <title>Buscar Empleado</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +25,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Registrar empleado</a>
+      <a class="navbar-brand" href="#">Buscar empleado</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -44,58 +46,29 @@
   <div class="container">
 
   
-      <form action="crearEmpleado.jsp" method="POST">
+      <form action="empleado.jsp" method="POST">
       <div class="card my-4">
-    
-         
-          
-                 <h5 class="card-header">Creando cuenta en Nomina</h5>
+          <h5 class="card-header">Buscar empleado</h5>
           <div class="card-body">
 
             <div class="input-group">
               <label for="name">Codigo</label>
-              <input name="codigo" type="text" class="form-control" placeholder="">  
+              <input name="codigoabuscar" type="text" class="form-control" placeholder="">  
               <br>
-            
-            </div>
-               <br>
-               
-               <div class="input-group">
-              <label for="name">Cedula</label>
-              <input name="cedula" type="text" class="form-control" placeholder="">  
-              <br>
-            
-            </div>
-             <br>
-             <div class="input-group">
-             <label for="name">Nombre</label>
-             <input name="nombre" type="text" class="form-control" placeholder="">
-           </div>
-
-            </div>
-             <br>
-             <div class="input-group">
-             <label for="name">Fecha Nacimiento:</label>
-             <input data-format="dd-MM-yyyy"  name="fechanacimiento" type="date" class="form-control" placeholder="">
-           </div>
-             
               
-             <br>
-             <div class="input-group">
-             <label for="name">Fecha ingreso:</label>
-             <input data-format="dd-MM-yyyy" name="fechaingreso" type="date" class="form-control" placeholder="">
-           </div>
-             
-             
-             <br>
-             <div class="input-group">
-             <label for="name">Fecha Retiro:</label>
-             <input data-format="dd-MM-yyyy"  name="fecharetiro" type="date" class="form-control" placeholder="">
-           </div>
+          
+              
+              
+              
+                             <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Codigo a buscar: <%//out.println(codigoabuscar);%></a>
+              
+            
+            </div>
+              
              
                <br>
              <span class="input-group-btn">
-                 <button class="btn btn-primary" type="submit">Crear</button>
+                 <button class="btn btn-primary" type="submit">Búscar</button>
               </span>
              
              
@@ -132,4 +105,5 @@
 </body>
 
 </html>
+
 

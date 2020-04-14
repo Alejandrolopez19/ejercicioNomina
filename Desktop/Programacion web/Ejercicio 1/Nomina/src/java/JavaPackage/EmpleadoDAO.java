@@ -42,6 +42,9 @@ public class EmpleadoDAO {
         this.empleado = empleado;
     }
     
+    
+    
+    
     public void registrarEmpleado() throws Exception
     {
         Connection con = MySQLConexion.getConnection();
@@ -63,6 +66,36 @@ public class EmpleadoDAO {
     }
     
    
+       public EmpleadoVO buscarEmpleado(String codigo) throws SQLException, Exception
+    {
+        Connection con = MySQLConexion.getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareCall("SELECT * FROM empleado");
+        ResultSet res = ps.executeQuery();
+        EmpleadoVO empleado = new EmpleadoVO();
+        while(res.next())
+        {
+            if(res.getString(1)==codigo)
+            {
+                
+                
+                empleado.setCodigo(res.getString(1));
+                empleado.setCedula(res.getString(2));
+                empleado.setNombre(res.getString(3));
+                empleado.setFechaNacimiento(res.getString(4));
+                empleado.setFechaIngreso(res.getString(5));
+                empleado.setFechaRetiro(res.getString(6));
+                
+                
+
+            }
+        }
+        con.close();
+        return empleado;
+    }
+ 
+    
+    
+    
     
 
 }
