@@ -18,14 +18,14 @@ public class EmpleadoVO {
     private String codigo;    
     private String cedula;
     private String nombre;
-    private Date fechaNacimiento;
-    private Date fechaIngreso;
-    private Date fechaRetiro;
+    private String fechaNacimiento;
+    private String fechaIngreso;
+    private String fechaRetiro;
 
     public EmpleadoVO() {
     }
 
-    public EmpleadoVO(String codigo, String cedula, String nombre, Date fechaNacimiento, Date fechaIngreso, Date fechaRetiro) {
+    public EmpleadoVO(String codigo, String cedula, String nombre, String fechaNacimiento, String fechaIngreso, String fechaRetiro) {
         this.codigo = codigo;
         this.cedula = cedula;
         this.nombre = nombre;
@@ -59,27 +59,27 @@ public class EmpleadoVO {
         this.nombre = nombre;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Date getFechaIngreso() {
+    public String getFechaIngreso() {
         return fechaIngreso;
     }
 
-    public void setFechaIngreso(Date fechaIngreso) {
+    public void setFechaIngreso(String fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
     }
 
-    public Date getFechaRetiro() {
+    public String getFechaRetiro() {
         return fechaRetiro;
     }
 
-    public void setFechaRetiro(Date fechaRetiro) {
+    public void setFechaRetiro(String fechaRetiro) {
         this.fechaRetiro = fechaRetiro;
     }
     

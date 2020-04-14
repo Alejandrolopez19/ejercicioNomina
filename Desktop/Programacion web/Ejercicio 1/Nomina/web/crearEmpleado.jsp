@@ -21,16 +21,16 @@
             
             
             String fechanacimiento = request.getParameter("fechanacimiento");
-            Date nacimiento=new SimpleDateFormat("yyyy/MM/dd").parse(fechanacimiento.replace("-","/"));
+            //Date nacimiento=new SimpleDateFormat("yyyy/MM/dd").parse(fechanacimiento.replace("-","/"));
             
             
             String fechaingreso = request.getParameter("fechaingreso");
-            Date ingreso=new SimpleDateFormat("yyyy/MM/dd").parse(fechaingreso.replace("-","/"));
+            //Date ingreso=new SimpleDateFormat("yyyy/MM/dd").parse(fechaingreso.replace("-","/"));
             
             String fecharetiro = request.getParameter("fecharetiro");
-            Date retiro=new SimpleDateFormat("yyyy/MM/dd").parse(fecharetiro.replace("-","/"));
+            //Date retiro=new SimpleDateFormat("yyyy/MM/dd").parse(fecharetiro.replace("-","/"));
         
-            EmpleadoVO vo = new EmpleadoVO(codigo,cedula,nombre,nacimiento,ingreso,retiro);
+            EmpleadoVO vo = new EmpleadoVO(codigo,cedula,nombre,fechanacimiento,fechaingreso,fecharetiro);
             EmpleadoDAO dao = new EmpleadoDAO(vo);
             
             dao.registrarEmpleado();
