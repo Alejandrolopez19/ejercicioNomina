@@ -1,3 +1,5 @@
+package JavaPackage;
+
 
 import java.util.Date;
 
@@ -79,6 +81,12 @@ public class EmpleadoVO {
 
     public void setFechaRetiro(Date fechaRetiro) {
         this.fechaRetiro = fechaRetiro;
+    }
+    
+    
+    @Override
+    public String toString() {
+        return "EmpleadoDTO{" + "codigo=" + codigo + ", " + "cedula=" + codigo + ", nombre=" + nombre + ", fechanacimiento=" + fechaNacimiento + ", fechaingreo=" + fechaIngreso + ", fecharetiro=" + fechaRetiro + '}';
     }
     
     

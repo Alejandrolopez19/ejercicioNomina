@@ -8,8 +8,8 @@
 
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
-<%@page import="default.EmpleadoVO"%>
-<%@page import="default.EmpleadoDAO"%>
+<%@page import="JavaPackage.EmpleadoVO"%>
+<%@page import="JavaPackage.EmpleadoDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,13 +21,14 @@
             
             
             String fechanacimiento = request.getParameter("fechanacimiento");
-            Date nacimiento=new SimpleDateFormat("dd/MM/yyyy").parse(fechanacimiento);
+            Date nacimiento=new SimpleDateFormat("yyyy/MM/dd").parse(fechanacimiento.replace("-","/"));
+            
             
             String fechaingreso = request.getParameter("fechaingreso");
-            Date ingreso=new SimpleDateFormat("dd/MM/yyyy").parse(fechaingreso);
+            Date ingreso=new SimpleDateFormat("yyyy/MM/dd").parse(fechaingreso.replace("-","/"));
             
-            String fecharetiro = request.getParameter("fecharetiro");  
-            Date retiro=new SimpleDateFormat("dd/MM/yyyy").parse(fecharetiro);
+            String fecharetiro = request.getParameter("fecharetiro");
+            Date retiro=new SimpleDateFormat("yyyy/MM/dd").parse(fecharetiro.replace("-","/"));
         
             EmpleadoVO vo = new EmpleadoVO(codigo,cedula,nombre,nacimiento,ingreso,retiro);
             EmpleadoDAO dao = new EmpleadoDAO(vo);
